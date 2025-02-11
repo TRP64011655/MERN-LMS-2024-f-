@@ -5,6 +5,8 @@ const jwt = require("jsonwebtoken");
 const registerUser = async (req, res) => {
   const { userName, userEmail, password, role } = req.body;
 
+  console.log("Received registration data:", req.body); // Add this line for debugging
+
   const existingUser = await User.findOne({
     $or: [{ userEmail }, { userName }],
   });

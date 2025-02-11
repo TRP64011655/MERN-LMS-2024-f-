@@ -15,6 +15,8 @@ function StudentHomePage() {
     useContext(StudentContext);
   const { auth } = useContext(AuthContext);
   const navigate = useNavigate();
+  
+  console.log("StudentHomePage loaded!"); // Debugging
 
   function handleNavigateToCoursesPage(getCurrentId) {
     console.log(getCurrentId);

@@ -1,4 +1,12 @@
-require("dotenv").config();
+// require("dotenv").config();
+
+// console.log("MONGO_URI:", process.env.MONGO_URI);
+
+
+require("dotenv").config({ path: "./server/.env" });
+console.log("MONGO_URI:", process.env.MONGO_URI);
+
+
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
